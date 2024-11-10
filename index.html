@@ -113,7 +113,7 @@
 // This clears any existing animation interval, ensuring that only 
 // one animation is running at a time.
 
-   animatedMeme.start(); // Start the sound
+   animatedMeme.start(); 
 // added this to handle starting the sound 
 
   animationInterval = setInterval(() => {
@@ -131,6 +131,9 @@ stopButton.addEventListener('click', () => {
 // this attaches a event listener to the stopButton element to trigger the next line of code when the button is clicked.
   clearInterval(animationInterval);
 // this line stops the animation by clearing the animationInterval variable. stopping the move method from being called stopping the animation theres no need for anything more because this only stops the animation. The page will wait for the start event trigger to begin the animation again. 
+  animatedMeme.audio.pause();
+// this line tells it to stop playing 
+  
 });
 </script>
 
